@@ -4,7 +4,7 @@ import { euroConverter } from '../../functions/euroConverter';
 import './TopTransaction.scss';
 
 
-const TopTransaction = ({ transactionsSorted, pln }) => {
+const TopTransaction = ({ transactions, pln }) => {
     return (
         <div id="top-transaciton">
             <h2>Top-3 bierzących transakcji</h2>
@@ -14,8 +14,8 @@ const TopTransaction = ({ transactionsSorted, pln }) => {
                     <span className="second">EUR</span>
                     <span className="third">PLN</span>
                 </li>
-                {transactionsSorted &&
-                    transactionsSorted.sort((a, b) => (b.amount - a.amount)).slice(0, 3).map(transaction => {
+                {transactions &&
+                    transactions.sort((a, b) => (b.amount - a.amount)).slice(0, 3).map(transaction => {
                         return (
                             <li key={transaction.id}>
                                 <span>{transaction.name}</span>
@@ -33,7 +33,7 @@ const TopTransaction = ({ transactionsSorted, pln }) => {
 
 const mapStateToProps = (state) => {
     return {
-        transactionsSorted: state.transactions.transactionsSorted,
+        transactions: state.transactions.transactions,
         pln: state.transactions.pln,
     }
 }

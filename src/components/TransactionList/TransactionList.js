@@ -7,6 +7,7 @@ import './TransactionList.scss';
 
 
 const TransactionList = ({ transactions, pln, deleteTransfer }) => {
+
     return (
         <div id="transaction-list">
             <h2>Lista transakcji</h2>
