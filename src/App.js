@@ -1,11 +1,10 @@
-import React from 'react';
-import AddTransaction from './components/AddTransaction/AddTransaction';
-import Converter from './components/Converter/Converter';
-import TransactionList from './components/TransactionList/TransactionList';
-import TransactionSum from './components/TransactionSum/TransactionSum';
-import TopTransaction from './components/TopTransaction/TopTransaction';
-import './App.scss';
-
+import React from "react";
+import AddTransaction from "./components/AddTransaction/AddTransaction";
+import TransactionList from "./components/TransactionList/TransactionList";
+import TransactionSum from "./components/TransactionSum/TransactionSum";
+import TopTransaction from "./components/TopTransaction/TopTransaction";
+import "./App.scss";
+import Converter from "./components/Converter/Converter";
 
 function App() {
   return (
